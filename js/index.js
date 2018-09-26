@@ -70,6 +70,7 @@ window.addEventListener("mousemove", function(event){
 });
 
 
+dist = 50;
 
 function swarmParticles(){
     canvas = document.querySelector("canvas");
@@ -109,20 +110,47 @@ function swarmParticles(){
     rects = drawRandomRects(20, ctx, canvas.height, canvas.width, 20, 10,null, true);
     console.log(rects);*/
 
-    
-    var circles = getRandomCircles(900, ctx, canvas.height, canvas.width, 10, 5,5, null, true);;
+    numberOfCircles = 1000;
+    var circles = getRandomCircles(numberOfCircles, ctx, canvas.height, canvas.width, 10, 5,5, null, true);;
     
     window.addEventListener("resize", function(){
         canvas.height = canvasContainer.height();
         canvas.width = canvasContainer.width();
-        circles = getRandomCircles(900, ctx, canvas.height, canvas.width, 10, 5,5, null, true);;
+        circles = getRandomCircles(numberOfCircles, ctx, canvas.height, canvas.width, 10, 5,5, null, true);;
     });
     
+    function get_rendezvous_dx_dy(circle, neighbours, stepSize){
+        // Using concept of https://magnus.ece.gatech.edu/Papers/SnapshotSWARM16.pdf
+        var x0 = circle.x;
+        var y0 = circle.y;
+        var xf = 0;
+        var yf = 0;
+        neighbours.forEach(n =>{
+            xf += stepSize * (n.x - x0) * weight(distance(x0,y0, n.x, n.y));
+            yf += stepSize * (n.y - y0) * weight(distance(x0,y0, n.x, n.y));
+        });
+        return {dx : xf, dy : yf};
+    }
+
+    function weight(distance){
+        return (distance - dist) / distance;
+    }
+
+    function distance(X0, Y0, X1, Y1){
+        var X = X0 - X1;
+        var Y = Y0 - Y1;
+        return Math.sqrt(X * X + Y * Y);
+    }
+
     function animate(){
         requestAnimationFrame(animate);
         ctx.clearRect(0,0, canvas.width, canvas.height)
         circles.forEach(element => {
             element.setMousePosition(mousePos);
+            neighbours = element.getNeighbours(circles, 200);
+            d = get_rendezvous_dx_dy(element, neighbours, 0.005);
+            element.dx = d.dx;
+            element.dy = d.dy;
             element.update();
         });
     }
@@ -205,12 +233,27 @@ function Circle(
         if (DIST < this.mouseSensitiveRadius){
             if(this.radius < this.maxRadius){
                 this.radius += this.dr;
+                this.x += (Math.random() - 0.5) * 5
+                this.y += (Math.random() - 0.5) * 5;
             }
         }else{
             if(this.radius > this.orignalRadius){
                 this.radius -= this.dr;
             }
         }
+    }
+
+    this.getNeighbours = function(circlesList, gazeRange){
+        var neighbours = [];
+        circlesList.forEach(circle => {
+            X = this.x - circle.x;
+            Y = this.y - circle.y;
+            DIST = Math.sqrt(X * X + Y * Y);
+            if(DIST < gazeRange && this != circle){
+                neighbours.push(circle);
+            }
+        });
+        return neighbours;
     }
 }
 
