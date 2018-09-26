@@ -23,8 +23,30 @@
 
     <body>
 
-        <div id="app">
-            {{message}}
+        <div id="todo-list">
+            <form v-on:submit.prevent = "addTodoItem">
+                <label for="new-todo">Add new TODO</label>
+                <input
+                    v-model = "newTodoText"
+                    id = "new-tofo"
+                    placeholder="Add something"
+                >
+                <button>Add</button>
+            </form>
+            <ul>
+                <li
+                    is = "todo-item"
+                    v-for = "(todo, index) in todos"
+                    v-bind:key = "todo.id"
+                    v-bind:title = "todo.title"
+                    v-on:remove = "todos.splice(index, 1)"
+                ></li>
+            </ul>
+        </div> 
+
+
+        <div class="canvas-container">
+            <canvas></canvas>
         </div>
 
 
