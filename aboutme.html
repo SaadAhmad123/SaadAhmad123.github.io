@@ -8,18 +8,21 @@
         <meta name="keywords" content="Saad Ahmad Portfolio">
         <meta name="author" content="Saad Ahmad">
         <!-- Chrome, Firefox and Opera -->
-        <meta name="theme-color" content="#191919">
+        <meta name="theme-color" content="#111111">
         <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#191919">
+        <meta name="msapplication-navbutton-color" content="#111111">
         <!-- iOS Safari -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <!--INLINE STYLES-->
         <title>
-            About Saad
+            About Me.
         </title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet"> 
         <link rel="stylesheet/less" type="text/css" href="css/index.less" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 
     </head>
     <body>
@@ -27,17 +30,26 @@
 
             <div class="static-navbar">
                 <div class="logo-div">
-                    <h1 class="text">Saad.</h1>
+                    <h1 class="text">Me.</h1>
                 </div>
-                <div class="navbar-menu-wrapper if-max-width-710-hide">
+                <div class="navbar-menu-wrapper hide-on-small-only">
                     <navbar-menu></navbar-menu>
                 </div>
-
+                <div class="mobile-navbar-menu-wrapper hide-on-med-and-up">
+                        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="small material-icons">menu</i></a>
+                </div>                
 
             </div>
 
+            <!--Navigation div for mobiles-->
+                <div id="slide-out" class="sidenav sidenav-menu-wrapper">
+                        <navbar-menu></navbar-menu>
+                </div>
+
+            <!--Navigation div for mobiles-->
+
             <div class="hero-div">
-                
+
             </div>
 
         </div>
@@ -45,6 +57,7 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <!--<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>-->
         <script src="js/index.js"></script>
     </body>
