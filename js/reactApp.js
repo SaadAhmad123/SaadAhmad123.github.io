@@ -346,7 +346,7 @@ function makeReactApp(){
         
     
 
-    root = document.getElementById("root");
+    var root = document.getElementById("root");
     ReactDOM.render(
         markup,
         root
