@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>React Testing</title>
+        <style>
+            .red {
+                background : red;
+            }
+
+            .padded{
+                padding:50px;
+            }
+        </style> 
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <script type="application/javascript" src="https://unpkg.com/react@16.0.0/umd/react.production.min.js"></script>
+        <script type="application/javascript" src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js"></script>
+        <script type="application/javascript" src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+      <script type="text/babel">
+            
+            function makeReactApp(){
+                let _markup = [];
+                function markup(statement){
+                    // add JSX markup statement to the markup list
+                    // which is to be rendered by ReactDOM.
+                    _markup.push(statement);
+                }
+
+                function formatUser(user){
+                    return user.f_name + " " + user.l_name;
+                }
+
+                function Welcome(props){
+                    return <h1 style = {props.style} className = {props.className} onClick={props.onClick}>Welcome {formatUser(props.user)}</h1>;
+                }
+                
+
+                class Clock extends React.Component{
+                    constructor(props){
+                        super(props);
+                        this.state = {
+                            date : new Date(),
+                        }
+                    }
+
+                    tick(){
+                        
+                        this.setState((prevState, props) => {
+                            return {
+                                date : new Date(),
+                            };
+                        });
+                    }
+
+                    componentDidMount(){
+                        this.timerID = setInterval(() => {
+                            this.tick();
+                        }, 500);
+                    }
+
+                    componentWillUnmount(){
+                        clearInterval(this.timerID);
+                    }
+
+                    render(){
+                        return (
+                            <h1>
+                                It is
+                                {" " + this.state.date.toLocaleTimeString()}
+                            </h1>
+                        );
+                    }
+                }
+
+                const user  = { f_name: "Saad", l_name:"Ahmad"};
+                const ele = (
+                    <div>
+                        <Welcome user = {user} style = {{color : "white"}} className = "red padded" onClick = {() => {alert("Hello Saad.")}}/>
+                        <Welcome user = {{f_name : "Ali", l_name : "Danish"}}/>
+                        <p>It is really nice meeting you. :)</p>
+                        <Clock />
+                    </div>
+                );
+                markup(ele);
+
+                return _markup;
+            }
+
+            function onload()
+            {
+                root = document.getElementById("root");
+                const reactMarkup = makeReactApp();
+                ReactDOM.render(
+                    reactMarkup,
+                    root
+                );
+            }
+            
+            onload();
+        </script>
+    </body>
+</html>
