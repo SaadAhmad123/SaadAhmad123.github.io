@@ -501,7 +501,7 @@ function ContactForm(props){
 					If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
 				</p>
 			</div>
-            <form className="contactform" method="post" action="php/process-form.php">
+            <form className="contactform">
                 <div className="input-field second-font">
                     <i className="fa fa-user prefix"></i>
                     <input id="name" name="name" type="text" className="validate" required/>

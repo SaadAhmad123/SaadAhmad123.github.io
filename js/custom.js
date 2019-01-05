@@ -34,9 +34,10 @@ function runCustomJS(){
             // AJAX CONTACT FORM
             $(".contactform").on("submit", function() {
                 $(".output_message").text("Loading...");
-
                 
-                Email.send({
+                var form = $(this);
+                // email client using https://www.smtpjs.com
+                /*Email.send({
                     SecureToken : "9a0d50bf-7d22-4a30-9ff6-bc036b605938",
                     To : 'deburgers123@gmail.com',
                     From : form.email,
@@ -49,8 +50,13 @@ function runCustomJS(){
                         $(".output_message").text("Message Sent!");
                     }
                 );
-
+                alert("ss");*/
+                $(".contactform").find(".output_message").addClass("error");
+                            //$(".output_message").text("Error Sending!");
+                            $(".output_message").text("Error Sending! Please contact me via my email address.");
                 return false;
+
+                /*
                 var form = $(this);
                 $.ajax({
                     url: form.attr("action"),
@@ -68,7 +74,7 @@ function runCustomJS(){
                     }
                 });
 
-                return false;
+                return false;*/
             });
 
             // MATERIAL CAROUSEL
