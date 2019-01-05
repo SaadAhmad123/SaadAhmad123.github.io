@@ -134,6 +134,16 @@ function AboutTileResumeMenu(props){
     );
 }
 
+
+function getFirst_N_ElementsOfArray(arr, thresh = 3){
+    if (arr.length > thresh){
+        return arr.slice(0,thresh);
+    }else{
+        return arr;
+    }
+}
+
+
 function ExpItem(props){
     // Strictly tied to the AboutTileResumeExperienceCard()
     return (
@@ -149,7 +159,20 @@ function ExpItem(props){
 }
 
 function AboutTileResumeExperienceCard(props){
-    const expList = props.experienceList;
+    var _expList = null;
+    if(props.windowWidth >= 800){
+        _expList = getFirst_N_ElementsOfArray(props.experienceList, props.desktopMaxCardItem);
+    }else{
+        _expList = props.experienceList;
+    }
+    var _knowMoreButton = null;
+    if(props.experienceList.length > props.desktopMaxCardItem){
+        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
+			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
+            <span style={{color:"#ffffff"}}>KNOW</span>
+			<span style={{color:"#ffb400"}}> MORE</span>
+		</a>;
+    }
     return(
         <div className={"resume-card resume-card-" + props.dataIndex} data-index={props.dataIndex}>
             <div className="resume-card-header">
@@ -161,7 +184,7 @@ function AboutTileResumeExperienceCard(props){
             <div className="resume-card-body experience">
                 <div className="resume-card-body-container second-font">
                     {
-                        expList.map((exp, idx) => 
+                        _expList.map((exp, idx) => 
                             <ExpItem 
                                 key={idx.toString()+"_kkk"} 
                                 job={exp.job}
@@ -170,6 +193,7 @@ function AboutTileResumeExperienceCard(props){
                             />
                         )
                     }
+                    {_knowMoreButton}
                 </div>
             </div>
         </div>
@@ -191,11 +215,26 @@ function SkillItem(props){
     );
 }
 
+
 function AboutTileSkillsCard(props){
-    var skillsList = props.skillsList;
-    var half_length = Math.ceil(skillsList.length / 2);
-    var skillsList1 = skillsList.splice(0,half_length);
-    var skillsList2 = skillsList;
+    var _skillsList = null;
+    if (props.windowWidth >= 800){
+        _skillsList = getFirst_N_ElementsOfArray(props.skillsList, props.desktopMaxCardItem);
+    }else{
+        _skillsList = props.skillsList;
+    }
+
+    var _knowMoreButton = null;
+    if(props.skillsList.length > props.desktopMaxCardItem){
+        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400 modal-trigger" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
+			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
+            <span style={{color:"#ffffff"}}>KNOW</span>
+			<span style={{color:"#ffb400"}}> MORE</span>
+        </a>;
+    }
+    var half_length = Math.ceil(_skillsList.length / 2);
+    var skillsList1 = _skillsList.slice(0,half_length);
+    var skillsList2 = _skillsList.slice(half_length, _skillsList.length);
     return(
         <div className={"resume-card resume-card-" + props.dataIndex} data-index={props.dataIndex}>
             <div className="resume-card-header">
@@ -214,6 +253,7 @@ function AboutTileSkillsCard(props){
                             {skillsList2.map((skill, idx) => <SkillItem skill={skill.skill} stars={skill.stars}/>)}
                         </div>
                     </div>
+                    {_knowMoreButton}
                 </div>
             </div>
         </div>
@@ -221,40 +261,68 @@ function AboutTileSkillsCard(props){
 }
 
 function AboutTileResume(props){
-    return(
-        <div className="resume-container">
-            <div className="container">
-                <div className="valign-wrapper row">
-                    <AboutTileResumeMenu />
-                    <div className="col s12 m12 l8 resume-cards-container">
-                        <div className="resume-cards">
-                            <AboutTileResumeExperienceCard
-                                dataIndex="0"
-                                titleIcon="fa-briefcase" 
-                                title="Experience"
-                                experienceList={expList}
-                            />
-                            <AboutTileResumeExperienceCard
-                                dataIndex="1"
-                                titleIcon="fa-graduation-cap"
-                                title="Education"
-                                experienceList={educationList}
-                            />
-                            <AboutTileSkillsCard 
-                                dataIndex="2"
-                                titleIcon="fa-star"
-                                title="Skills"
-                                skillsList = {skillsList}
-                            />
+        return(
+            <div className="resume-container">
+                <div className="container">
+                    <div className="valign-wrapper row">
+                        <AboutTileResumeMenu />
+                        <div className="col s12 m12 l8 resume-cards-container">
+                            <div className="resume-cards">
+                                <AboutTileResumeExperienceCard
+                                    dataIndex="0"
+                                    titleIcon="fa-briefcase" 
+                                    title="Experience"
+                                    experienceList={expList}
+                                    windowWidth = {props.windowWidth}
+                                    desktopMaxCardItem = {props.desktopMaxExperienceCardItem}
+                                    knowMoreLink = "#modal_exp"
+                                />
+                                <AboutTileResumeExperienceCard
+                                    dataIndex="1"
+                                    titleIcon="fa-graduation-cap"
+                                    title="Education"
+                                    experienceList={educationList}
+                                    windowWidth = {props.windowWidth}
+                                    desktopMaxCardItem = {props.desktopMaxEducationCardItem}
+                                    knowMoreLink = "#modal_edu"
+                                />
+                                <AboutTileSkillsCard 
+                                    dataIndex="2"
+                                    titleIcon="fa-star"
+                                    title="Skills"
+                                    skillsList = {skillsList}
+                                    windowWidth = {props.windowWidth}
+                                    desktopMaxCardItem = {props.desktopMaxSkillCardItem}
+                                    knowMoreLink = "#modal_skill"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
 }
 
 class AboutTile extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {windowWidth : window.innerWidth};
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+      
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+      
+    updateWindowDimensions() {
+        this.setState((prevState, props) => {return { width: window.innerWidth, height: window.innerHeight }});
+    }
+
     render(){
         return (
         <section>
@@ -277,13 +345,103 @@ class AboutTile extends React.Component{
                                 skype = {personalInfo.skype}
                     />
                 </div>
-                <AboutTileResume />
+                <AboutTileResume windowWidth={this.state.width} desktopMaxEducationCardItem={3} desktopMaxExperienceCardItem={3} desktopMaxSkillCardItem={10}/>
+                {/*            
+                <div className="container badges">
+                    <div className="row">
+                        <div className="col s12 m4 l4 center-align">
+                            <h3>
+                                <i className="fa fa-suitcase"></i>
+                                <span className="font-weight-700">7+</span>
+                            </h3>
+                            <h6 className="uppercase font-weight-500">
+                                Year Experience
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                */}
             </div>
-            
             <TileContentCloseBtn />
         </section>
         );
     }
+}
+
+function PortfolioDataPanel(props){
+    return(
+        <div className="col s12 m6 l3 xl3" data-panel={props.panelRef}>
+            <a href="#">
+                <img className="responsive-img" src={props.imgSrc} alt="Project"></img>
+                <div className="valign-wrapper"><span className="font-weight-400 uppercase">{props.projectName}</span></div>
+            </a>
+        </div>
+    );
+}
+
+function PortifolioDataPanelContentItem(props){
+    return (
+        <div data-panel={props.panelRef}>
+            <div className="row">
+                <div className='col s12 l6 xl6'>
+                    <img className="responsive-img" src={props.imgSrc}></img>
+                </div>
+                <div className="col s12 l6 xl6">
+                    <h3 className="font-weight-600 white-text uppercase">{props.projectName}</h3>
+                    <ul className="project-details white-text second-font">
+                        <li><i className="fa fa-user"></i><span className="font-weight-600"> Client </span>: <span className="font-weight-400 uppercase">{props.client}</span></li>
+                        <li><i className="fa fa-calendar"></i><span className="font-weight-600"> Date </span>: <span className="font-weight-400 uppercase">{props.date}</span></li>
+                        <li><i className="fa fa-cogs"></i> <span className="font-weight-600"> Used Technologies</span> : <span className="font-weight-400 uppercase">{props.usedTech}</span></li>
+                    </ul>
+                    <hr></hr>
+                    <p className="white-text second-font">{props.infoText}</p>
+                    <a href={props.previewLink} className="waves-effect waves-light btn font-weight-500">Preview <i className="fa fa-external-link"></i></a>
+                </div> 
+            </div>
+        </div>
+    );
+}
+
+function PortfolioDataPanelContentList(props){
+    const _portfolioList = portfolioList;
+    return(
+        <div className="bl-panel-items" id="bl-panel-work-items">
+            {
+                _portfolioList.map(
+                    (item, index) => 
+                    <PortifolioDataPanelContentItem 
+                        key={index.toString()}
+                        panelRef={"panel-" + index.toString()}
+                        imgSrc="images/projects/project-1.jpg"
+                        projectName="Image Project"
+                        client="Semester Porject"
+                        date="June 12, 2015"
+                        usedTech="Php"
+                        infoText="Hello World"
+                        previewLink="#"
+                    />
+                )
+            }
+            <nav>
+                <span className="control-button bl-previous-work uppercase font-weight-700"><i className="fa fa-chevron-left"></i></span>
+                <span className="control-button fa fa-close fa-2x bl-icon-close center-align" id="bl-icon-close"></span>
+                <span className="control-button bl-next-work uppercase font-weight-700"><i className="fa fa-chevron-right"></i></span>
+            </nav>
+        </div>
+    );
+}
+
+function PortfolioDataPanelTileList(props){
+    const _portfolioList = portfolioList
+    return(
+        <div className={"row center-align da-thumbs"} id="bl-work-items">
+            {
+                _portfolioList.map(
+                    (item, index) => <PortfolioDataPanel key={index.toString()} panelRef={"panel-" + index.toString()} imgSrc="images/projects/project-1.jpg" projectName="Image Project"/>
+                )
+            }
+        </div>
+    );
 }
 
 class PortfolioTile extends React.Component{
@@ -293,11 +451,85 @@ class PortfolioTile extends React.Component{
                 <TileTitle backgroundTitle="WORKS" titleText1="MY&nbsp;" titleText2="PORTFOLIO"/>
                 <div className="bl-content">
                     <TileContentTitle backgroundTitle="WORKS" titleText1="MY&nbsp;" titleText2="PORTFOLIO"/>
+                    <div className="container">
+                        {/* Divider Starts */}
+                        <div className="divider center-align">
+                            <span className="outer-line"></span>
+                            <span className="fa fa-suitcase" aria-hidden="true"></span>
+                            <span className="outer-line"></span>
+                        </div>
+                        {/* Divider Ends */}
+
+                        <PortfolioDataPanelTileList />
+                    </div>
                 </div>
                 <TileContentCloseBtn />
             </section>
         );
     }
+}
+
+function ContactInfo(props){
+    const _personalInfo = personalInfo;
+    return (
+        <div className="col s12 m5 l3 xl3 leftside">
+            <h6 className="font-weight-500 uppercase">Phone</h6>
+            <span className="font-weight-400 second-font"><i className="fa fa-phone"></i>{_personalInfo.phone}</span>
+			<h6 className="font-weight-500 uppercase">Email</h6>
+			<span className="font-weight-400 second-font"><i className="fa fa-envelope"></i> {_personalInfo.email}</span>
+			<h6 className="font-weight-500 uppercase">Address</h6>
+			<span className="font-weight-400 second-font"><i className="fa fa-home"></i>  {_personalInfo.address}</span>
+            <h6 className="font-weight-500 uppercase">Social Profiles</h6>
+            <div className="social">
+                <ul className="list-inline social social-intro center-align p-none">
+                    <li className="facebook"><a href={_personalInfo.facebook} title="Lacebook"><i className="fa fa-facebook"></i></a></li>
+                    <li className="linkedin"><a href={_personalInfo.linkedin} title="LinkedIn"><i className="fa fa-linkedin"></i></a></li>
+                    <li className="github"><a href={_personalInfo.github} title="github"><i className="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+
+function ContactForm(props){
+    return(
+        <div className="col s12 m7 l9 xl9 rightside">
+			<h6 className="uppercase m-none">Feel free to drop me a line</h6>
+			<div className="row">
+				<p className="col s12 m12 l7 xl7 second-font">
+					If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
+				</p>
+			</div>
+            <form className="contactform" method="post" action="php/process-form.php">
+                <div className="input-field second-font">
+                    <i className="fa fa-user prefix"></i>
+                    <input id="name" name="name" type="text" className="validate" required/>
+                    <label className="font-weight-400" for="name">Your Name</label>
+                </div>
+                <div className="input-field second-font">
+                    <i className="fa fa-envelope prefix"></i>
+                    <input id="email" type="email" name="email" className="validate" required/>
+                    <label for="email">Your Email</label>
+                </div>
+                <div className="input-field second-font">
+                    <i className="fa fa-comments prefix"></i>
+                    <textarea id="message" name="message" className="materialize-textarea" required></textarea>
+                    <label for="message">Your message</label>
+                </div>
+                <div className="col s12 m12 l4 xl4 submit-form">
+                    <button className="btn font-weight-500" type="submit" name="send">
+						Send Message <i className="fa fa-send"></i>
+					</button>
+                </div>
+                <div className="col s12 m12 l8 xl8 form-message">
+                    <span className="output_message center-align font-weight-500 uppercase"></span>
+                </div>
+            </form>
+        </div>
+
+
+    );
 }
 
 class ContactTile extends React.Component{
@@ -307,6 +539,17 @@ class ContactTile extends React.Component{
                 <TileTitle backgroundTitle="CONTACT" titleText1="GET&nbsp;" titleText2="IN TOUCH"/>
                 <div className="bl-content">
                     <TileContentTitle backgroundTitle="CONTACT" titleText1="GET&nbsp;" titleText2="IN TOUCH"/>
+                    <div className="container">
+                        <div className="divider center-align">
+                            <span className="outer-line"></span>
+                            <span className="fa fa-envelope-open" aria-hidden="true"></span>
+                            <span className="outer-line"></span>
+                        </div>
+                        <div className="row contact">
+                            <ContactInfo />
+                            <ContactForm />
+                        </div>
+                    </div>
                 </div>
                 <TileContentCloseBtn />
             </section>
@@ -332,6 +575,7 @@ class MainContentPage extends React.Component{
                     <AboutTile/>
                     <PortfolioTile/>
                     <ContactTile />
+                    <PortfolioDataPanelContentList/>
             </div>
         );
     }
