@@ -35,6 +35,22 @@ function runCustomJS(){
             $(".contactform").on("submit", function() {
                 $(".output_message").text("Loading...");
 
+                
+                Email.send({
+                    SecureToken : "9a0d50bf-7d22-4a30-9ff6-bc036b605938",
+                    To : 'deburgers123@gmail.com',
+                    From : form.email,
+                    Subject : "Query via the portfolio website [saadahmed123.github.io] from [" + form.name + "]",
+                    Body : form.message
+                }).then(
+                    message => {
+                        console.log("Sent");
+                        $(".contactform").find(".output_message").addClass("success");
+                        $(".output_message").text("Message Sent!");
+                    }
+                );
+
+                return false;
                 var form = $(this);
                 $.ajax({
                     url: form.attr("action"),
@@ -46,7 +62,8 @@ function runCustomJS(){
                             $(".output_message").text("Message Sent!");
                         } else {
                             $(".contactform").find(".output_message").addClass("error");
-                            $(".output_message").text("Error Sending!");
+                            //$(".output_message").text("Error Sending!");
+                            $(".output_message").text("Error Sending! Please contact me via my email address.");
                         }
                     }
                 });

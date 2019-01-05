@@ -166,7 +166,7 @@ function AboutTileResumeExperienceCard(props){
         _expList = props.experienceList;
     }
     var _knowMoreButton = null;
-    if(props.experienceList.length > props.desktopMaxCardItem){
+    if(props.experienceList.length > props.desktopMaxCardItem && props.windowWidth >= 800){
         _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
 			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
             <span style={{color:"#ffffff"}}>KNOW</span>
@@ -225,7 +225,7 @@ function AboutTileSkillsCard(props){
     }
 
     var _knowMoreButton = null;
-    if(props.skillsList.length > props.desktopMaxCardItem){
+    if(props.skillsList.length > props.desktopMaxCardItem && props.windowWidth >= 800){
         _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400 modal-trigger" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
 			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
             <span style={{color:"#ffffff"}}>KNOW</span>
