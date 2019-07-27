@@ -79,9 +79,10 @@ function AboutTileInfo(props){
             <div className="col s12 m7 l8 xl9 personal-info">
                 <h6 className="uppercase"><i className="fa fa-user"></i> Personal Informations</h6>
 				<div className="col m12 l7 xl7 p-none">
-                    <p className="second-font">
-                        {props.personalInfo}
-                    </p>
+                    {props.personalInfo.split('\n').map((item, i) => {
+                        return <p className="second-font" key={i}>{item}</p>;
+                    })}
+                    
                 </div>
                 <div className="col s12 m12 l6 p-none">
                     <ul className="second-font list-1">
@@ -89,7 +90,7 @@ function AboutTileInfo(props){
                         <li><span className="font-weight-600">Last Name: </span>{props.lastName}</li>
                         <li><span className="font-weight-600">Date of birth: </span>{props.DOB}</li>
                         <li><span className="font-weight-600">Nationality: </span>{props.nationality}</li>
-						<li><span className="font-weight-600">Freelance: </span>{props.freelance}</li>
+						<li><span className="font-weight-600">Social Media: </span>{props.freelance}</li>
                     </ul>
                 </div>
                 <div className="col s12 m12 l6 p-none">
@@ -569,7 +570,7 @@ class MainContentPage extends React.Component{
         return (
             <div id="bl-main" className="bl-main">
                     <MainImageTile name="Saad Ahmad" 
-                                    personalAttributes={["an Engineer", "a Problem Solver", "a Perfectionist"]}
+                                    personalAttributes={personalAttributes}
                                     image = "images/main-photo.jpg"
                                     />
                     <AboutTile/>

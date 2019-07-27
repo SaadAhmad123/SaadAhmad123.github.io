@@ -2,9 +2,9 @@
 const personalInfo = {
     image : "images/photo-about.jpg",
     intro : `   
-                I'm a Freelance Web Designer & Developer based in Madrid, Spain. 
-                qI have serious passion for UI effects, animations and creating intuitive, 
-                with over a decade of experience.
+        I am an Electical Engineer as well as a freelance Software developer. 
+        I am interested in Internet of Things, Intelligent Robotics, Artificial Intelligence as well as Web / Mobile / Desktop Application Development.
+        I love to read and attempt to implement new research papers and techniques relevent to my fields of interest. I also like to learn new programming languages and frameworks to make my work more efficient and amazing. 
             `,
     firstName : "Saad",
     lastName : "Ahmad",
@@ -20,6 +20,8 @@ const personalInfo = {
     linkedin:"#",
     github:"#",
 }
+
+const personalAttributes = ["a Futurist", "a Problem Solver"];
 
 const expList = [
     {
