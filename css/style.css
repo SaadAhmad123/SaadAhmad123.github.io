@@ -1561,7 +1561,7 @@ body.blog .pagination li a i {
    margin-bottom: 25px;
 }
 
-.comments-form .btn.btn-primary{
+.comments-form .btn.btn-primary{ 
    padding: 10px 20px;
    float: right;
    margin: 20px 0 10px;
@@ -2007,3 +2007,9 @@ body.blog .pagination li a i {
 	
 }
 
+.expPageItemCard{
+	padding: 12px;
+	padding-top : 32px;
+	background-color : black;
+	border-left : 4px solid #daa520;
+}

@@ -168,10 +168,9 @@ function AboutTileResumeExperienceCard(props){
     }
     var _knowMoreButton = null;
     if(props.experienceList.length > props.desktopMaxCardItem && props.windowWidth >= 800){
-        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
-			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
+        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400" style={{backgroundColor:"#daa520", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
             <span style={{color:"#ffffff"}}>KNOW</span>
-			<span style={{color:"#ffb400"}}> MORE</span>
+			<span style={{color:"#ffffff"}}> MORE</span>
 		</a>;
     }
     return(
@@ -216,7 +215,6 @@ function SkillItem(props){
     );
 }
 
-
 function AboutTileSkillsCard(props){
     var _skillsList = null;
     if (props.windowWidth >= 800){
@@ -227,11 +225,10 @@ function AboutTileSkillsCard(props){
 
     var _knowMoreButton = null;
     if(props.skillsList.length > props.desktopMaxCardItem && props.windowWidth >= 800){
-        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400 modal-trigger" style={{backgroundColor:"#222222", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
-			<i className="fa fa-info-circle" style={{paddingLeft:"6px", paddingRight:"6px" ,fontSize:"18px", color:"rgb(119,119,119)"}}></i>
+        _knowMoreButton = <a href={props.knowMoreLink} className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-400" style={{backgroundColor:"#daa520", color:"#ffb400", paddingLeft:"12px;", paddingRight:"12px"}}>
             <span style={{color:"#ffffff"}}>KNOW</span>
-			<span style={{color:"#ffb400"}}> MORE</span>
-        </a>;
+			<span style={{color:"#ffffff"}}> MORE</span>
+		</a>;
     }
     var half_length = Math.ceil(_skillsList.length / 2);
     var skillsList1 = _skillsList.slice(0,half_length);
@@ -276,7 +273,7 @@ function AboutTileResume(props){
                                     experienceList={expList}
                                     windowWidth = {props.windowWidth}
                                     desktopMaxCardItem = {props.desktopMaxExperienceCardItem}
-                                    knowMoreLink = "#modal_exp"
+                                    knowMoreLink = "/experience.html"
                                 />
                                 <AboutTileResumeExperienceCard
                                     dataIndex="1"
@@ -285,7 +282,7 @@ function AboutTileResume(props){
                                     experienceList={educationList}
                                     windowWidth = {props.windowWidth}
                                     desktopMaxCardItem = {props.desktopMaxEducationCardItem}
-                                    knowMoreLink = "#modal_edu"
+                                    knowMoreLink = "/education.html"
                                 />
                                 <AboutTileSkillsCard 
                                     dataIndex="2"
@@ -294,7 +291,7 @@ function AboutTileResume(props){
                                     skillsList = {skillsList}
                                     windowWidth = {props.windowWidth}
                                     desktopMaxCardItem = {props.desktopMaxSkillCardItem}
-                                    knowMoreLink = "#modal_skill"
+                                    knowMoreLink = "/skill.html"
                                 />
                             </div>
                         </div>

@@ -48,9 +48,14 @@ const expList = [
 
 const educationList = [
     {
+        job : "Master in Advanced Engineering - Monash University",
+        timeSpan : "2019 - Present",
+        text : "Doing my Masters in Electrical Engineering from Monash University, Clayton, VIC, Australia "
+    },
+    {
         job : "Bachelors in Electrical Engineering - NUST, Islamabad",
-        timeSpan : "2015 - Present",
-        text : "I am doing my degree form National University of Science and Technology (NUST), H-12, Islamabad, Pakistan"
+        timeSpan : "2015 - 2019",
+        text : "I have completed my Bachelor of Electrical Engineering with a CGPA of 3.52 form National University of Science and Technology (NUST), H-12, Islamabad, Pakistan"
     },
     {
         job : "High School",
@@ -139,6 +144,79 @@ portfolioList=[
         infoText : "Hello World",
         previewLink : "#"
     },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    {
+        imgSrc : "images/projects/project-1.jpg",
+        projectName : "Image Project",
+        client : "Semester Porject",
+        date : "June 12, 2015",
+        usedTech : "Php,dsfdsfs",
+        infoText : "Hello World",
+        previewLink : "#"
+    },
+    
 ]
 
 /* Portfolio tile data -- END -- */
