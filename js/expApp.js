@@ -18,6 +18,7 @@ function ExpItem(props){
             <div className="expPageItemCard">
                 <div className="resume-content">
                     <h6 className="uppercase"><span>{props.job}</span></h6>
+                    <span style={{ color : 'orange', letterSpacing: '1.5px', fontWeight:'600' }} className="uppercase">{props.place}</span>{props.place ? <br/> : null}
                     <span className="date"><i className="fa fa-calendar-o"></i>&nbsp;{props.timeSpan}</span>
                     <p>{props.text}</p>
                 </div>
@@ -46,6 +47,7 @@ class ExpPage extends React.Component{
                                         job={exp.job}
                                         timeSpan={exp.timeSpan}
                                         text={exp.text}
+                                        place={exp.place}
                                     />
                                 )
                             }

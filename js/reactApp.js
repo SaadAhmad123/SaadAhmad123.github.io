@@ -151,6 +151,7 @@ function ExpItem(props){
         <div>
             <div className="resume-content">
                 <h6 className="uppercase"><span>{props.job}</span></h6>
+                <span style={{ color : 'orange', letterSpacing: '1.5px', fontWeight:'600' }} className="uppercase">{props.place}</span>{props.place ? <br/> : null}
                 <span className="date"><i className="fa fa-calendar-o"></i>&nbsp;{props.timeSpan}</span>
                 <p>{props.text}</p>
             </div>
@@ -190,6 +191,7 @@ function AboutTileResumeExperienceCard(props){
                                 job={exp.job}
                                 timeSpan={exp.timeSpan}
                                 text={exp.text}
+                                place={exp.place}
                             />
                         )
                     }
@@ -343,7 +345,7 @@ class AboutTile extends React.Component{
                                 skype = {personalInfo.skype}
                     />
                 </div>
-                <AboutTileResume windowWidth={this.state.width} desktopMaxEducationCardItem={3} desktopMaxExperienceCardItem={3} desktopMaxSkillCardItem={10}/>
+                <AboutTileResume windowWidth={this.state.width} desktopMaxEducationCardItem={4} desktopMaxExperienceCardItem={3} desktopMaxSkillCardItem={14}/>
                 {/*            
                 <div className="container badges">
                     <div className="row">

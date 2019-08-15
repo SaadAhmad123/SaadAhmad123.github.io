@@ -2026,7 +2026,7 @@ body.blog .pagination li a i {
 	height: 13px;
 	border-radius: 50%;
 	background: #fff;
-	animation: lds-grid 1.2s linear infinite;
+	animation: lds-grid 250ms linear infinite;
   }
   .lds-grid div:nth-child(1) {
 	top: 6px;
