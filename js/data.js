@@ -178,6 +178,16 @@ portfolioList=[
         infoText : `In order to provide a smooth remote operation of the MCI System, I contributed in the development of a system which delivers a video feed and control feed at a very low latency ( < ~150ms) on Commercial 4G networks for the smooth operation of telemetry cell surgery. I undertook this project under the supervision of Dr. Saad bin Qaisar(http://seecs.nust.edu.pk/faculty/saad.html) and Dr. Osman Hassan(http://seecs.nust.edu.pk/faculty/osmanhasan.html).`,
         previewLink : "http://mci.seecs.nust.edu.pk"
     },    
+    {
+        imgSrc : "/images/projects/rovbot.png",
+        imgLink : "#",
+        projectName : "roVBot",
+        client : "Semester Project (Bachelor of Electrical Engineering - 4th Semester)",
+        date : "Sep 2017 - Mar 2018",
+        usedTech : "WebRTC - HTML - CSS - JS - PHP - Python - Raspberry Pi 3 - Atmega328 - DC Motor Drive - Power Management",
+        infoText : `Security and surveillance at low cost is getting rare with every passing day. roVBot is a domestic drone which can be controlled from anywhere in the world via WiFi/Internet Connection and user can get sonar and visual data remotely. The robot can move around freely and the user can observe all the blind spots in the region (home/office) from anywhere in world at a very low latency. I completed this projected as a semester project in the course of Microprocessor systems taught by Dr. Saad bin Qaisar`,
+        previewLink : "#"
+    },    
 ]
 
 /* Portfolio tile data -- END -- */

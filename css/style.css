@@ -2081,3 +2081,13 @@ body.blog .pagination li a i {
 		background-color: #daa520
 	}
   }
+
+
+.portfolioInfoContainer{
+	-ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.portfolioInfoContainer::-webkit-scrollbar { 
+	display: none;
+}

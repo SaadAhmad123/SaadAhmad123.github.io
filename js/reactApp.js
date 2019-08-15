@@ -389,7 +389,7 @@ function PortifolioDataPanelContentItem(props){
                     </a>
                 </div>
                 <div className="col s12 l6 xl6">
-                    <div style={{ height:"600px", overflowY:'auto', paddingTop:'12px'}}>
+                    <div className="portfolioInfoContainer" style={{ height:"600px", overflowY:'auto', paddingTop:'12px'}}>
                         <h3 className="font-weight-600 white-text uppercase">{props.projectName}</h3>
                         <ul className="project-details white-text second-font">
                             <li><i className="fa fa-user"></i><span className="font-weight-600"> Client </span>: <span className="font-weight-400 uppercase">{props.client}</span></li>
@@ -400,7 +400,7 @@ function PortifolioDataPanelContentItem(props){
                         <p className="white-text second-font">{props.infoText.split('\n').map((item, i) => {
                             return <p className="second-font" key={i}>{item}</p>;
                         })}</p>
-                        <a href={props.previewLink} className="waves-effect waves-light btn font-weight-500" target="_blank" style={{ marginBottom:'64px' }}>Preview <i className="fa fa-external-link"></i></a>
+                        <a href={props.previewLink} className="waves-effect waves-light btn font-weight-500" target="_blank" style={{ marginBottom:'128px' }}>Preview <i className="fa fa-external-link"></i></a>
                     </div>
                 </div> 
             </div>
