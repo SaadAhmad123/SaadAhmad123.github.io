@@ -382,20 +382,26 @@ function PortfolioDataPanel(props){
 function PortifolioDataPanelContentItem(props){
     return (
         <div data-panel={props.panelRef}>
-            <div className="row">
+            <div className="row" style={{ overflowY:'auto' }}>
                 <div className='col s12 l6 xl6'>
-                    <img className="responsive-img" src={props.imgSrc}></img>
+                    <a href={props.imgLink} target="_blank">
+                        <img className="responsive-img" src={props.imgSrc}></img>
+                    </a>
                 </div>
                 <div className="col s12 l6 xl6">
-                    <h3 className="font-weight-600 white-text uppercase">{props.projectName}</h3>
-                    <ul className="project-details white-text second-font">
-                        <li><i className="fa fa-user"></i><span className="font-weight-600"> Client </span>: <span className="font-weight-400 uppercase">{props.client}</span></li>
-                        <li><i className="fa fa-calendar"></i><span className="font-weight-600"> Date </span>: <span className="font-weight-400 uppercase">{props.date}</span></li>
-                        <li><i className="fa fa-cogs"></i> <span className="font-weight-600"> Used Technologies</span> : <span className="font-weight-400 uppercase">{props.usedTech}</span></li>
-                    </ul>
-                    <hr></hr>
-                    <p className="white-text second-font">{props.infoText}</p>
-                    <a href={props.previewLink} className="waves-effect waves-light btn font-weight-500">Preview <i className="fa fa-external-link"></i></a>
+                    <div style={{ height:"600px", overflowY:'auto', paddingTop:'12px'}}>
+                        <h3 className="font-weight-600 white-text uppercase">{props.projectName}</h3>
+                        <ul className="project-details white-text second-font">
+                            <li><i className="fa fa-user"></i><span className="font-weight-600"> Client </span>: <span className="font-weight-400 uppercase">{props.client}</span></li>
+                            <li><i className="fa fa-calendar"></i><span className="font-weight-600"> Date </span>: <span className="font-weight-400 uppercase">{props.date}</span></li>
+                            <li><i className="fa fa-cogs"></i> <span className="font-weight-600"> Used Technologies</span> : <span className="font-weight-400 uppercase">{props.usedTech}</span></li>
+                        </ul>
+                        <hr></hr>
+                        <p className="white-text second-font">{props.infoText.split('\n').map((item, i) => {
+                            return <p className="second-font" key={i}>{item}</p>;
+                        })}</p>
+                        <a href={props.previewLink} className="waves-effect waves-light btn font-weight-500" target="_blank">Preview <i className="fa fa-external-link"></i></a>
+                    </div>
                 </div> 
             </div>
         </div>
@@ -412,13 +418,14 @@ function PortfolioDataPanelContentList(props){
                     <PortifolioDataPanelContentItem 
                         key={index.toString()}
                         panelRef={"panel-" + index.toString()}
-                        imgSrc="images/projects/project-1.jpg"
-                        projectName="Image Project"
-                        client="Semester Porject"
-                        date="June 12, 2015"
-                        usedTech="Php"
-                        infoText="Hello World"
-                        previewLink="#"
+                        imgSrc={item.imgSrc}
+                        imgLink={item.imgLink}
+                        projectName={item.projectName}
+                        client={item.client}
+                        date={item.date}
+                        usedTech={item.usedTech}
+                        infoText={item.infoText}
+                        previewLink={item.previewLink}
                     />
                 )
             }
@@ -437,7 +444,7 @@ function PortfolioDataPanelTileList(props){
         <div className={"row center-align da-thumbs"} id="bl-work-items">
             {
                 _portfolioList.map(
-                    (item, index) => <PortfolioDataPanel key={index.toString()} panelRef={"panel-" + index.toString()} imgSrc="images/projects/project-1.jpg" projectName="Image Project"/>
+                    (item, index) => <PortfolioDataPanel key={index.toString()} panelRef={"panel-" + index.toString()} imgSrc={item.imgSrc} projectName={item.projectName}/>
                 )
             }
         </div>

@@ -154,95 +154,20 @@ const skillsList = [
 
 portfolioList=[
     {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php",
-        infoText : "Hello World",
-        previewLink : "#"
-    },{
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    {
-        imgSrc : "images/projects/project-1.jpg",
-        projectName : "Image Project",
-        client : "Semester Porject",
-        date : "June 12, 2015",
-        usedTech : "Php,dsfdsfs",
-        infoText : "Hello World",
-        previewLink : "#"
-    },
-    
+        imgSrc : "/images/projects/ssvep.png",
+        imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjrp8aAsYTkAhVQWH0KHZZAArMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FBasic-parts-of-a-SSVEP-based-BCI-system_fig3_301890798&psig=AOvVaw0gmfK7oR7-Kd83stmgyH8v&ust=1565941539800510",
+        projectName : "SSVEP Based User Interface (Brain Computer Interface)",
+        client : "Final Year Project (Bachelor in Electrical Engineering)",
+        date : "June 2018 - May 10, 2019",
+        usedTech : "Python - MATLAB - OpenBCI - EEG Signals - Stocastic Signal Processing - OpenCV",
+        infoText : `The brain computer interface is the method of interacting with the computer just with our thought. My Bachelor Final Year Project is to develop a User interface which can be operated directly with human brain. The neurological process used to achieve this is Steady State Visually Evoked Process (SSVEP). My advisor in this project was Dr. Awais Mehmood Kamboh (http://seecs.nust.edu.pk/faculty/amkamboh.html)
+
+        In this project we mainly applied the Canonical Correlation Analysis Technique to detect an SSVEP signal from the 32-channel EEG signals. SSVEP (Steady State Visually Evoked Potential) are the signals which are generated in the brain when a person sees a blinking light. These signals have a higher Signal to Noise ratio and can be catagorised relatively accuratly.
+        
+        The project also included an eye tracking systems which was quite accurate and was based on the Gradient Minimizing Technique as proposed in the paper by Fabian Tim (https://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf).
+        `,
+        previewLink : "https://github.com/PoweredByME/SSVEP_FYP"
+    },    
 ]
 
 /* Portfolio tile data -- END -- */
