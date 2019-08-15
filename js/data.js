@@ -154,6 +154,57 @@ const skillsList = [
 
 portfolioList=[
     {
+        imgSrc : "/images/projects/illust.png",
+        imgLink : "#",
+        projectName : "Design.ai | Illustrations",
+        client : "Freelance Project",
+        date : "June 2019",
+        usedTech : "Laravel - PHP - VueJS - HTML - CSS",
+        infoText : `
+            This is one of my freelance projects in which I developed a web application which gives the users the oppertunity to select from a wide range of SVGs and then customize the colors of that SVG.
+        `,
+        previewLink : "http://undraw.sabsolutionspak.com/assets"
+    },
+    {
+        imgSrc : "/images/projects/calendar.png",
+        imgLink : "#",
+        projectName : "Design.ai | Calendar",
+        client : "Freelance Project",
+        date : "June 2019",
+        usedTech : "Laravel - PHP - VueJS - HTML - CSS",
+        infoText : `
+            This is one of my freelance projects in which I developed a web application which is a calendar containing most of the global events.
+        `,
+        previewLink : "http://undraw.sabsolutionspak.com/calendar"
+    },
+    {
+        imgSrc : "/images/projects/inews.png",
+        imgLink : "#",
+        projectName : "Ivioremessages News",
+        client : "Freelance Project",
+        date : "June 2019",
+        usedTech : "React Native - Wordpress REST API",
+        infoText : `
+            This is one of my freelance projects in which I developed a news application for Android using React Native. 
+            The Application fetches the data from a Wordpress site via a REST API. The Application also has Google Ads in it.
+        `,
+        previewLink : "https://github.com/SaadAhmad123/react_native_Iviromessages_news"
+    },{
+        imgSrc : "/images/projects/hosteleat.png",
+        imgLink : "#",
+        projectName : "HostelEat",
+        client : "My Start Up",
+        date : "April 2019",
+        usedTech : "Laravel - Php - Javascript - HTML - CSS",
+        infoText : `
+            One of the most common problem in the hostel of universities of Pakistan is that most of the student do not like the food that is provided in the mess. As a result, they go to different restaurant to get food they like. However, most of the people want to eat home cooked food. There are a lot of people in Pakistan willing to cook in there homes for money but they do not have a platform to advertise themselves.
+            
+            In this start up we tried to solve this problem by developing a platform which connected home based eateries with the hostelites of different universities. Our service ensured the delivery and quality of the food.
+
+            I was the lead software developer and co-founder of this startup. 
+        `,
+        previewLink : "http://hosteleat.com"
+    },{
         imgSrc : "/images/projects/ssvep.png",
         imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjrp8aAsYTkAhVQWH0KHZZAArMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FBasic-parts-of-a-SSVEP-based-BCI-system_fig3_301890798&psig=AOvVaw0gmfK7oR7-Kd83stmgyH8v&ust=1565941539800510",
         projectName : "SSVEP Based User Interface (Brain Computer Interface)",
@@ -167,6 +218,18 @@ portfolioList=[
         The project also included an eye tracking systems which was quite accurate and was based on the Gradient Minimizing Technique as proposed in the paper by Fabian Tim (https://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf).
         `,
         previewLink : "https://github.com/PoweredByME/SSVEP_FYP"
+    },
+    {
+        imgSrc : "/images/projects/autorintro.png",
+        imgLink : "#",
+        projectName : "Author Intro",
+        client : "Freelance Project",
+        date : "January 2019",
+        usedTech : "Laravel - Php - Javascript - HTML - CSS",
+        infoText : `
+            This is one of my freelance projects in which I developed a website where the authors can connect with eachother and review the works of each other.
+        `,
+        previewLink : "http://authorintro.com"
     }, 
     {
         imgSrc : "/images/projects/mci.jpg",
@@ -223,14 +286,54 @@ portfolioList=[
         imgLink : "#",
         projectName : "GLASS.h",
         client : "Semester Project (Bachelor of Electrical Engineering - 1st Semester)",
-        date : "June 2018",
+        date : "Dec 2015",
         usedTech : "C - C++ - OpenGL - GLUT.h",
         infoText : `This is one of the projects I am most proud of because most of the people from my batch developed amazing 2D games like minesweeper and desktop version of color switch using this library as their first and second semester projects (Bachelors). Students from NUST, who know about it, use this library even today.
         
         In C, OpenGL, GLUT.h, SDL all have a learning curve and many lose hope and abandon learning and experience of these powerful libraries. We developed glass so that new students can learn about such things the easy way. GLASS.h is a C library that provides a low level abstraction of GLUT.h thus reduces the learning curve.
         `,
         previewLink : "https://github.com/PoweredByME/glass.h"
-    },    
+    },
+    {
+        imgSrc : "/images/projects/music.png",
+        imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj_pKit0ITkAhXbR30KHbKyAmYQjRx6BAgBEAQ&url=%2Furl%3Fsa%3Di%26rct%3Dj%26q%3D%26esrc%3Ds%26source%3Dimages%26cd%3D%26ved%3D%26url%3Dhttps%253A%252F%252Fmath.illinoisstate.edu%252Fschebol%252Ftalks%252FMathmusic-talk.htm%26psig%3DAOvVaw2sfluHrnMVk21V3sQQXK2I%26ust%3D1565949936677480&psig=AOvVaw2sfluHrnMVk21V3sQQXK2I&ust=1565949936677480",
+        projectName : "Mathematical Analysis and Computer Synthesis of Music",
+        client : "Self Project",
+        date : "Feb 2016",
+        usedTech : "C# - Complex Analysis",
+        infoText : `I made a program after a through mathematical analysis of music waveform composition and sinusoidal patterns in which occur in musical melodies and made a program based of the equations which was able to create musical sounds. I have done this project under the supervision of Dr. Sajid Ali (http://seecs.nust.edu.pk/faculty/sajidali.html)`,
+        previewLink : "#"
+    },
+    {
+        imgSrc : "/images/projects/mathparser.png",
+        imgLink : "#",
+        projectName : "MathParser",
+        client : "Semester Project (Bachelor of Electrical Engineering - 2nd Semester)",
+        date : "March 2016",
+        usedTech : "C#",
+        infoText : `A very simple to use and extendable math expression parsing library (PCL) in C#. Ideal for Scientific Calculator App Development in C#. It is capable of processing matrices and real numbers. Store variables and implement various function. The functionality of the library functionality can be extended very easily. I completed this project as a semester project in the course taught by Dr. Kashif Sharif (https://pk.linkedin.com/in/kashif-sharif)`,
+        previewLink : "https://github.com/SaadAhmad123/MathParser"
+    },
+    {
+        imgSrc : "/images/projects/matapp.png",
+        imgLink : "#",
+        projectName : "MatApp",
+        client : "Semester Project (Bachelor of Electrical Engineering - 2nd Semester)",
+        date : "April 2016",
+        usedTech : "C# - Xamarin",
+        infoText : `An android Scientific Calculator App based on MathParser. It can solve scientific operations as well as Matrix Operations`,
+        previewLink : "https://github.com/PoweredByME/MatApp/tree/master/MatApp/bin/Release"
+    },
+    {
+        imgSrc : "/images/projects/tetrix.png",
+        imgLink : "#",
+        projectName : "Tetris",
+        client : "Semester Project (Bachelor of Electrical Engineering - 3rd Semester)",
+        date : "November 2016",
+        usedTech : "Digital Logic Design - Proteus - Hardware - Logic Gate",
+        infoText : `Developed a Tetris game on 8x8 matrix display by using only the basis digital logic circuit components (Gates, Flip Flops and Counters)`,
+        previewLink : "https://youtu.be/Ef0phpMYhKA"
+    },
 ]
 
 /* Portfolio tile data -- END -- */
