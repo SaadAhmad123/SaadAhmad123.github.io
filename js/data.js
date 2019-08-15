@@ -95,7 +95,7 @@ const skillsList = [
         skill : "C/C++",
         stars : 4
     },{
-        skill : "C#",
+        skill : "C# & Xamarin",
         stars : 4
     },{
         skill : "Python",

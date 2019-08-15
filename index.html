@@ -8,6 +8,79 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
         
+        <style>
+        .lds-grid {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+  }
+  .lds-grid div {
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: #fff;
+	animation: lds-grid 250ms linear infinite;
+  }
+  .lds-grid div:nth-child(1) {
+	top: 6px;
+	left: 6px;
+	animation-delay: 0s;
+  }
+  .lds-grid div:nth-child(2) {
+	top: 6px;
+	left: 26px;
+	animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(3) {
+	top: 6px;
+	left: 45px;
+	animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(4) {
+	top: 26px;
+	left: 6px;
+	animation-delay: -0.4s;
+  }
+  .lds-grid div:nth-child(5) {
+	top: 26px;
+	left: 26px;
+	animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(6) {
+	top: 26px;
+	left: 45px;
+	animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(7) {
+	top: 45px;
+	left: 6px;
+	animation-delay: -0.8s;
+  }
+  .lds-grid div:nth-child(8) {
+	top: 45px;
+	left: 26px;
+	animation-delay: -1.2s;
+  }
+  .lds-grid div:nth-child(9) {
+	top: 45px;
+	left: 45px;
+	animation-delay: -1.6s;
+  }
+  @keyframes lds-grid {
+	0%, 100% {
+		background-color: white;
+	}
+	50% {
+		background-color: #daa520
+	}
+  }
+        
+        </style>
+
+
+
         <meta name="discription" content="Saad Ahmad - CV">
         <meta name="keywords" content="Saad Ahmad, CV, Portfolio, vCard, Resume">
         <meta name="author" content="Saad Ahmad">
@@ -51,6 +124,8 @@
         
         <script type="text/babel">makeReactApp();runBoxLayoutJS();runCustomJS();</script>
         <script src="js/boxlayout.js"></script>
+
+
 
     </head>
 
