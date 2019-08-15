@@ -372,7 +372,7 @@ function PortfolioDataPanel(props){
     return(
         <div className="col s12 m6 l3 xl3" data-panel={props.panelRef}>
             <a href="#">
-                <img className="responsive-img" src={props.imgSrc} alt="Project"></img>
+                <img  className="responsive-img portfolio-sc-img" src={props.imgSrc} alt="Project"></img>
                 <div className="valign-wrapper"><span className="font-weight-400 uppercase">{props.projectName}</span></div>
             </a>
         </div>

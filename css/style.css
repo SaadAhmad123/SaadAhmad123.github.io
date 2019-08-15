@@ -2091,3 +2091,19 @@ body.blog .pagination li a i {
 .portfolioInfoContainer::-webkit-scrollbar { 
 	display: none;
 }
+
+
+.portfolio-sc-img{
+	height: 180px !important;
+	width: 100%;
+}
+
+@media(max-width:600px){
+	.portfolio-sc-img{
+		height: auto !important;
+		width: 100%;
+	}	
+}
+
+
+

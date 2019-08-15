@@ -187,6 +187,49 @@ portfolioList=[
         usedTech : "WebRTC - HTML - CSS - JS - PHP - Python - Raspberry Pi 3 - Atmega328 - DC Motor Drive - Power Management",
         infoText : `Security and surveillance at low cost is getting rare with every passing day. roVBot is a domestic drone which can be controlled from anywhere in the world via WiFi/Internet Connection and user can get sonar and visual data remotely. The robot can move around freely and the user can observe all the blind spots in the region (home/office) from anywhere in world at a very low latency. I completed this projected as a semester project in the course of Microprocessor systems taught by Dr. Saad bin Qaisar`,
         previewLink : "#"
+    },
+    {
+        imgSrc : "/images/projects/pose.png",
+        imgLink : "#",
+        projectName : "Dance Pose Extraction using Pose Detection",
+        client : "Self Project",
+        date : "July 2018",
+        usedTech : "Python - Tensorflow",
+        infoText : `I used the pose detector Convolutional Neural Network proposed by the paper Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields (https://arxiv.org/pdf/1611.08050.pdf) and attempted to use it to extract the dance moves in a video.`,
+        previewLink : "https://youtu.be/pz26POcmXTM"
+    },    
+    {
+        imgSrc : "/images/projects/facenet.jpg",
+        imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjGgffmyoTkAhXSfX0KHQd9DtAQjRx6BAgBEAQ&url=https%3A%2F%2Fmedium.com%2Fintro-to-artificial-intelligence%2Fone-shot-learning-explained-using-facenet-dff5ad52bd38&psig=AOvVaw2czP8do1u9zhCIlaBqeEle&ust=1565948337698937",
+        projectName : "Face Recognition base on FaceNet",
+        client : "Self Project",
+        date : "June 2018",
+        usedTech : "Python - Kera - OpenFace - DLIB",
+        infoText : `I implemented the FaceNet algorithm for face recognition using python.`,
+        previewLink : "#"
+    },  
+    {
+        imgSrc : "/images/projects/eyetrack.png",
+        imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiIuLjCy4TkAhVKb30KHVi1B5EQjRx6BAgBEAQ&url=https%3A%2F%2Finsidescientific.com%2Fintegrating-eye-tracking-physiology-measurement&psig=AOvVaw1mOEvUqKYMLppBh8UHzFBz&ust=1565948654820165",
+        projectName : "Webcam based Eye Tracker based on Vector Product",
+        client : "Self Project",
+        date : "June 2018",
+        usedTech : "Python - OpenCV - Cython - Dlib - Vector Gradient Optimization",
+        infoText : `I implemented an eye tracker in python using OpenCV and cython. I implemented a technique of finding the global minima in the image (i.e eye pupil) using vector products as mentioned in the research paper "ACCURATE EYE CENTRE LOCALISATION BY MEANS OF GRADIENTS" (https://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf)`,
+        previewLink : "https://github.com/PoweredByME/pythonWebcamEyeTracker"
+    },    
+    {
+        imgSrc : "/images/projects/glass.jpg",
+        imgLink : "#",
+        projectName : "GLASS.h",
+        client : "Semester Project (Bachelor of Electrical Engineering - 1st Semester)",
+        date : "June 2018",
+        usedTech : "C - C++ - OpenGL - GLUT.h",
+        infoText : `This is one of the projects I am most proud of because most of the people from my batch developed amazing 2D games like minesweeper and desktop version of color switch using this library as their first and second semester projects (Bachelors). Students from NUST, who know about it, use this library even today.
+        
+        In C, OpenGL, GLUT.h, SDL all have a learning curve and many lose hope and abandon learning and experience of these powerful libraries. We developed glass so that new students can learn about such things the easy way. GLASS.h is a C library that provides a low level abstraction of GLUT.h thus reduces the learning curve.
+        `,
+        previewLink : "https://github.com/PoweredByME/glass.h"
     },    
 ]
 
