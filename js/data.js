@@ -158,7 +158,7 @@ portfolioList=[
         imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjrp8aAsYTkAhVQWH0KHZZAArMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.researchgate.net%2Ffigure%2FBasic-parts-of-a-SSVEP-based-BCI-system_fig3_301890798&psig=AOvVaw0gmfK7oR7-Kd83stmgyH8v&ust=1565941539800510",
         projectName : "SSVEP Based User Interface (Brain Computer Interface)",
         client : "Final Year Project (Bachelor in Electrical Engineering)",
-        date : "June 2018 - May 10, 2019",
+        date : "June 2018 - May 2019",
         usedTech : "Python - MATLAB - OpenBCI - EEG Signals - Stocastic Signal Processing - OpenCV",
         infoText : `The brain computer interface is the method of interacting with the computer just with our thought. My Bachelor Final Year Project is to develop a User interface which can be operated directly with human brain. The neurological process used to achieve this is Steady State Visually Evoked Process (SSVEP). My advisor in this project was Dr. Awais Mehmood Kamboh (http://seecs.nust.edu.pk/faculty/amkamboh.html)
 
@@ -167,6 +167,16 @@ portfolioList=[
         The project also included an eye tracking systems which was quite accurate and was based on the Gradient Minimizing Technique as proposed in the paper by Fabian Tim (https://www.inb.uni-luebeck.de/fileadmin/files/PUBPDFS/TiBa11b.pdf).
         `,
         previewLink : "https://github.com/PoweredByME/SSVEP_FYP"
+    }, 
+    {
+        imgSrc : "/images/projects/mci.jpg",
+        imgLink : "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiYnty5vITkAhXJbX0KHdC6AVEQjRx6BAgBEAQ&url=http%3A%2F%2Fwww.compassfertility.com.au%2Fivf&psig=AOvVaw2EMouzPZFf6Iywwb8EPEJr&ust=1565944367687327",
+        projectName : "Low Latency teleoperation of MicroCell Injection System",
+        client : "Research Project (ConnecKt Lab, NUST-SEECS, H-12, Islamabad)",
+        date : "Sep 2017 - Mar 2018",
+        usedTech : "WebRTC - MQTT - C# - JS - HTML - CSS",
+        infoText : `In order to provide a smooth remote operation of the MCI System, I contributed in the development of a system which delivers a video feed and control feed at a very low latency ( < ~150ms) on Commercial 4G networks for the smooth operation of telemetry cell surgery. I undertook this project under the supervision of Dr. Saad bin Qaisar(http://seecs.nust.edu.pk/faculty/saad.html) and Dr. Osman Hassan(http://seecs.nust.edu.pk/faculty/osmanhasan.html).`,
+        previewLink : "http://mci.seecs.nust.edu.pk"
     },    
 ]
 

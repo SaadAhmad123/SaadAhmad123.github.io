@@ -389,7 +389,7 @@ function PortifolioDataPanelContentItem(props){
                     </a>
                 </div>
                 <div className="col s12 l6 xl6">
-                    <div style={{ height:"600px", overflowY:'auto', paddingTop:'12px'}}>
+                    <div style={{ height:"600px", overflowY:'auto', paddingTop:'12px', paddingBottom: '64px'}}>
                         <h3 className="font-weight-600 white-text uppercase">{props.projectName}</h3>
                         <ul className="project-details white-text second-font">
                             <li><i className="fa fa-user"></i><span className="font-weight-600"> Client </span>: <span className="font-weight-400 uppercase">{props.client}</span></li>
