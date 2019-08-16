@@ -154,6 +154,17 @@ const skillsList = [
 
 portfolioList=[
     {
+        imgSrc : "/images/projects/vc.png",
+        imgLink : "#",
+        projectName : "1 to 1 Video Chat",
+        client : "Self Project",
+        date : "June 2019",
+        usedTech : "WebRTC - MQTT - Javascript - HTML - CSS",
+        infoText : `
+            In this project I developed a 1-to-1 video chat web applications. It is a serverless application with no backend. The communications are handled by MQTT streams and the Video Chat is handled by WebRTC.
+        `,
+        previewLink : "https://poweredbyme.github.io/vc/"
+    },{
         imgSrc : "/images/projects/illust.png",
         imgLink : "#",
         projectName : "Design.ai | Illustrations",
