@@ -2,9 +2,9 @@
 const personalInfo = {
     image : "images/photo-about.jpg",
     intro : `   
-        I am an Electical Engineer as well as a freelance Software developer. 
-        I am interested in Internet of Things, Intelligent Robotics, Artificial Intelligence as well as Web / Mobile / Desktop Application Development.
-        I love to read and attempt to implement new research papers and techniques relevent to my fields of interest. I also like to learn new programming languages and frameworks to make my work more efficient and amazing. 
+            I am an Electrical Engineer as well as a freelance Software developer. I am interested in Internet of Things, Intelligent Robotics, Artificial Intelligence as well as Web / Mobile / Desktop Application Development. 
+            I love to read and attempt to implement new research papers and techniques relevant to my fields of interest. I also like to learn new programming languages, frameworks and methods to make my work more efficient and amazing.
+            I am currently pursuing Masters of Advanced Engineering (Electrical Engineering) from Monash University, Clayton Campus. I have completed my Bachelor of Electrical Engineering from National University of Sciences and Technology, Pakistan. 
             `,
     firstName : "Saad",
     lastName : "Ahmad",
@@ -14,8 +14,8 @@ const personalInfo = {
     phone : "(+61)41 3725464",
     address : "Clayton, VIC, Australia",
     email : "saadkwi12@hotmail.com",
-    spokenLanguage : "English",
-    skype : "Not Available",
+    spokenLanguage : "English, Urdu",
+    skype : "live:saadkwi12",
     facebook:"https://www.facebook.com/profile.php?id=100005595785739",
     linkedin:"https://www.linkedin.com/in/saad-ahmad-kwi123/",
     github:"https://github.com/PoweredByME",

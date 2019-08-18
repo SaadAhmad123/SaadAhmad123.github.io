@@ -102,8 +102,11 @@ function AboutTileInfo(props){
 						<li><span className="font-weight-600">Skype: </span>{props.skype}</li>
                     </ul>
                 </div>
-                <a href="#" className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-500">
+                <a href="/resources/saad_ahmad_resume.pdf" target="_blank" className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-500" style={{ margin:'2px' }}>
 					Download Resume <i className="fa fa-file-pdf-o"></i>
+				</a>
+                <a href="/resources/saad_ahmad_cv.pdf" target="_blank" className="col s12 m12 l4 xl4 waves-effect waves-light btn font-weight-500" style={{ margin:'2px' }}>
+					Download CV <i className="fa fa-file-pdf-o"></i>
 				</a>
 				{/*<a href="blog-dark.html" className="col s12 m12 l4 xl4 btn btn-blog font-weight-500">
 					My Blog <i className="fa fa-edit"></i>
