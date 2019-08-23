@@ -336,13 +336,27 @@ portfolioList=[
         previewLink : "https://github.com/PoweredByME/MatApp/tree/master/MatApp/bin/Release"
     },
     {
-        imgSrc : "/images/projects/tetrix.png",
+        imgSrc : "/images/projects/ardgame.png",
         imgLink : "#",
-        projectName : "Tetris",
+        projectName : "Arduino Evade Game",
+        client : "Self Project",
+        date : "March 2017",
+        usedTech : "Arduino - Logic Gates",
+        infoText : `
+            I developed a game on Arduino in which different obstacles were bombarded on the player and the player had to evade those. I used Logic circuits to control the low level working of the display while arduino just provided with high level data stream. 
+            A 0 to 10 counter was used to select each row of the and a 3 to 8 multiplexer was used to display the row data.
+            Please click on 'Preview to watch the video'.
+        `,
+        previewLink : "https://youtu.be/3hBgTjWM7KA"
+    },
+    {
+        imgSrc : "/images/projects/tetrix.jpg",
+        imgLink : "#",
+        projectName : "Evade Game - Digital Logic Design Project",
         client : "Semester Project (Bachelor of Electrical Engineering - 3rd Semester)",
         date : "November 2016",
         usedTech : "Digital Logic Design - Proteus - Hardware - Logic Gate",
-        infoText : `Developed a Tetris game on 8x8 matrix display by using only the basis digital logic circuit components (Gates, Flip Flops and Counters)`,
+        infoText : `I developed a game in which different obstacles were bombarded on the player and the player had to evade those. I developed this by using only the basis digital logic circuit components (Gates, Flip Flops and Counters)`,
         previewLink : "https://youtu.be/Ef0phpMYhKA"
     },
     {
