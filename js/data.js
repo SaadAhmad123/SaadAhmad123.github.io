@@ -360,6 +360,26 @@ portfolioList=[
         previewLink : "https://youtu.be/Ef0phpMYhKA"
     },
     {
+        imgSrc : "/images/projects/14sensor.png",
+        imgLink : "#",
+        projectName : "Obstacle Avoidance Robot - My Second Robot",
+        client : "Self Project",
+        date : "August 2015",
+        usedTech : "Op Amp - H-Bridge Motor Driver - Transistor - LDR - Logic Gate ICs",
+        infoText : `
+            My First Robot was cool for me at that time but I wanted more out of it. So, I decided to make a robot with 14 sensors all modulated at 5KHz so that the DC from the sun might have less effect on the sensors. I modulated IR Leds via 555 Timer IC and by search extensively over the internet found a way to only make 14 active notch filters to detect the frequency. I also developed a power management system for the motor drivers and the circuitary. 
+            
+            It took me 3 month to solder the entire logic circuit and make a chasis of the robot. However, it could not operate well because quite frankly I had tried to develop something very very complex for my knowledge. I had not calculated the required current and voltage for the system and knew very little about modulation and demodulation etc. The robot did work a bit but ended up frying the entire logic board. 
+
+            However, I learnt quite a lot from this experience, especially about electronics, digital logic design and modulation.
+
+            After this, I started to look into computer programming and developed it as a hobby after I was introduced to C-language during my first semester at NUST, H-12, Islamabad.
+     
+
+        `,
+        previewLink : "#"
+    },
+    {
         imgSrc : "/images/projects/first.png",
         imgLink : "#",
         projectName : "My First Robot",
