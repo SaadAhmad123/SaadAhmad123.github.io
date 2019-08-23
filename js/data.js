@@ -345,6 +345,22 @@ portfolioList=[
         infoText : `Developed a Tetris game on 8x8 matrix display by using only the basis digital logic circuit components (Gates, Flip Flops and Counters)`,
         previewLink : "https://youtu.be/Ef0phpMYhKA"
     },
+    {
+        imgSrc : "/images/projects/first.png",
+        imgLink : "#",
+        projectName : "My First Robot",
+        client : "Self Project",
+        date : "February 2015",
+        usedTech : "Op Amp - H-Bridge Motor Driver - Transistor - LDR - Logic Gate ICs",
+        infoText : `This was the first robot that I ever built back when I was in 12th grade. I can confidently say that this was one of the biggest reasons for me to decide to become an Electrical Engineer.
+                    I wanted to build a robot that could avoid obstacles. I did not know programming or electronics. I taught myself about the transistors, LDRs, OpAmps, Logic Cate ICs and power management.
+                    This robot was a big success for me back then and it worked. I really wish I had a video of it to show the people how it looked. Now, at the time of writing this portfolio, I only have an image of its circuit board.accent-1
+                    This robot was a very basic one and what it did was if anything came infront of it, it just stoped before it could collide. The second functionality was that it had two LDR sensors below it and if it was about to fall the robot used to sense that and stopped moving.
+                    I am still proud of it because even though kids these days can easily make something better than this via Arduino, Lego etc, I made it using the most basic components and learnt a lot. I even had to learn to solder to make it. I developed the real feel and respect for the field.
+                    Ah, those were the good old days...
+        `,
+        previewLink : "#"
+    },
 ]
 
 /* Portfolio tile data -- END -- */
