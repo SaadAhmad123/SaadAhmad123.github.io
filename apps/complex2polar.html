@@ -1,0 +1,58 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Complex to polar Converter</title>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+    <body>
+
+        <form id="complex-form" name="complex-form" onsubmit="return complex2Polar(this)">
+            <p>Complex to Polar : (X + jY) to (r < theta)</p>
+            <label>X : </label>
+            <input type="text" name="X" id="X"/>
+            <br>
+            <label>Y : </label>
+            <input type="text" name="Y" id="Y"/>
+            <input type="submit"/>
+        </form>
+        <p id="output-polar" style="color:blue"></p>
+        <br>
+        <form id="polar-form" name="polar-form" onsubmit="return polar2Complex(this)">
+            <p>Polar to Complex : (r < theta) to (X + jY)</p>
+            <label>r : </label>
+            <input id="r" name="r" type="text"/>
+            <br>
+            <label>theta : </label>
+            <input id="theta" name="theta" type="text"/>
+            <input type="submit">
+        </form>
+        <p id="output-complex" style="color:red"></p>        
+
+        <script>
+            function complex2Polar(form){
+                var x = form.X.value;
+                var y = form.Y.value;
+                x = parseFloat(x);
+                y = parseFloat(y);
+                var r = Math.sqrt(x*x + y*y);
+                var theta = Math.atan(  y / x ) * 180 / Math.PI;
+                document.getElementById('output-polar').innerHTML = "Polar Form (r < theta) : " + r + " < " + theta;
+                return false;
+            }
+
+            function polar2Complex(form){
+                var r = form.r.value;
+                var theta = form.theta.value;
+                r = parseFloat(r);
+                theta = parseFloat(theta);
+                var radTheta = theta * Math.PI / 180;
+                var X = r * Math.cos(radTheta);
+                var Y = r * Math.sin(radTheta);
+                document.getElementById('output-complex').innerHTML = "Complex Form (X + jY) : " + X + ( Y >= 0 ? " + j" : " - j") + Math.abs(Y);
+                return false;
+            }
+        </script>
+
+    </body>
+</html>
