@@ -2,9 +2,11 @@
 const personalInfo = {
     image : "images/photo-about.jpg",
     intro : `   
-            I am an Electrical Engineer as well as a freelance Software developer. I am interested in Internet of Things, Intelligent Robotics, Artificial Intelligence as well as Web / Mobile / Desktop Application Development. 
-            I love to read and attempt to implement new research papers and techniques relevant to my fields of interest. I also like to learn new programming languages, frameworks and methods to make my work more efficient and amazing.
-            I am currently pursuing Masters of Advanced Engineering (Electrical Engineering) from Monash University, Clayton Campus. I have completed my Bachelor of Electrical Engineering from National University of Sciences and Technology, Pakistan. 
+            Never quit. Always add value.
+
+            I have a progress and result-oriented personality with a keen interest in self-improvement, cooperation and community development. As far as my technical curiosity is concerned, I have a passion to understand and design systems which can "elegantly" solve problems.  
+            As I connect the dots of my journey, so far —from my impromptu encounter with transistors on a rainy evening, to developing obstacle avoiding robots, to learning computer programming, to designing softwares, to machine learning, to neuro-science— I have been trying to develop systems which are inspired from nature, my imagination, other people or for a solution to a problem; all of it to add value to people’s lives.   
+            However, that is only one side of me. My other side is all about people. I love to meet, understand and be friends with other people. I love to meet people from diverse backgrounds, because they always have the most to teach me. I to help people, empower my friends and give them a very bright perspective of this world. 
             `,
     firstName : "Saad",
     lastName : "Ahmad",
